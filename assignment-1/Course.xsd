@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<schema targetNamespace="http://www.nju.edu.cn/schema"
+<schema targetNamespace="http://jw.nju.edu.cn/schema"
            xmlns="http://www.w3.org/2001/XMLSchema"
            xmlns:nju="http://www.nju.edu.cn/schema"
-           xmlns:jw="http://jw.nju.edu.cn/schema">
-  <import schemaLocation="PersonInfo.xsd"/>
-  <import schemaLocation="Course.xsd"/>
-  <import schemaLocation="DepartmentInfo.xsd"/>
-
+           xmlns:jw="http://jw.nju.edu.cn/schema"
+           elementFormDefault="qualified">
   <simpleType name="课程编号类型">
     <restriction base="string">
       <length value="6"/>
