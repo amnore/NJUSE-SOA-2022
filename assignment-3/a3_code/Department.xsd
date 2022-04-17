@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema targetNamespace="http://www.nju.edu.cn/schema"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:nju="http://www.nju.edu.cn/schema"
+        elementFormDefault="qualified">
+  <complexType name="departmentInfo">
+    <sequence>
+      <element name="id" type="integer"/> <!-- 部门编号 -->
+      <element name="name" type="string"/> <!-- 部门名称 -->
+      <element name="address" type="string"/> <!-- 部门地址 -->
+      <element name="contact" type="string"/> <!-- 部门联系方式 -->
+    </sequence>
+  </complexType>
+
+  <element name="department" type="nju:departmentInfo"/>
+</schema>

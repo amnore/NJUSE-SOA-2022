@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema targetNamespace="http://jw.nju.edu.cn/schema"
+           xmlns="http://www.w3.org/2001/XMLSchema"
+           xmlns:nju="http://www.nju.edu.cn/schema"
+           xmlns:jw="http://jw.nju.edu.cn/schema"
+           elementFormDefault="qualified">
+  <simpleType name="课程编号类型">
+    <restriction base="string">
+      <length value="6"/>
+    </restriction>
+  </simpleType>
+
+  <complexType name="courseInfo">
+    <sequence>
+      <element name="name" type="string"/> <!-- 课程名称 -->
+      <element name="departmentId" type="integer"/> <!-- 开课学院 -->
+      <element name="semister" type="string"/> <!-- 开课学期 -->
+
+      <element name="teacherId"
+               type="integer"
+               minOccurs="0"
+               maxOccurs="unbounded"/> <!-- 任课老师 -->
+
+      <element name="schedule" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="time" type="string"/> <!-- 上课时间 -->
+            <element name="classroom" type="string"/> <!-- 上课教室 -->
+          </sequence>
+        </complexType>
+      </element>
+
+      <element name="id" type="jw:课程编号类型"/> <!-- 课程编号 -->
+    </sequence>
+  </complexType>
+
+  <element name="course" type="jw:courseInfo"/>
+</schema>

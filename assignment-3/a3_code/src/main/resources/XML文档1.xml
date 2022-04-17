@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<student xmlns="http://jw.nju.edu.cn/schema"
+         xmlns:nju="http://www.nju.edu.cn/schema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.nju.edu.cn/schema PersonInfo.xsd
+                             http://jw.nju.edu.cn/schema Student.xsd">
+  <nju:id>191250013</nju:id>
+  <nju:name>陈枕戈</nju:name>
+  <nju:contact>191250013@smail.nju.edu.cn</nju:contact>
+  <nju:age>20</nju:age>
+  <nju:departmentId>0</nju:departmentId>
+  <nju:gender>male</nju:gender>
+  <studentId>191250013</studentId>
+  <major>软件工程</major>
+  <grades>
+    <课程成绩 课程编号="123456" 成绩性质="平时成绩">
+      <成绩>
+        <学号>191250013</学号>
+        <得分>0</得分>
+      </成绩>
+    </课程成绩>
+    <课程成绩 课程编号="123456" 成绩性质="作业成绩">
+      <成绩>
+        <学号>191250013</学号>
+        <得分>0</得分>
+      </成绩>
+    </课程成绩>
+    <课程成绩 课程编号="123456" 成绩性质="期中成绩">
+      <成绩>
+        <学号>191250013</学号>
+        <得分>0</得分>
+      </成绩>
+    </课程成绩>
+    <课程成绩 课程编号="123456" 成绩性质="期末成绩">
+      <成绩>
+        <学号>191250013</学号>
+        <得分>0</得分>
+      </成绩>
+    </课程成绩>
+    <课程成绩 课程编号="123456" 成绩性质="总评成绩">
+      <成绩>
+        <学号>191250013</学号>
+        <得分>0</得分>
+      </成绩>
+    </课程成绩>
+  </grades>
+</student>
