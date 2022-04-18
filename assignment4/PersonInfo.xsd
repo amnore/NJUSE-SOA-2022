@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema targetNamespace="http://www.nju.edu.cn/schema"
+           xmlns="http://www.w3.org/2001/XMLSchema"
+           xmlns:nju="http://www.nju.edu.cn/schema"
+           elementFormDefault="qualified">
+  <complexType name="personInfo">
+    <sequence>
+      <element name="id" type="integer"/> <!-- 人员编号 -->
+      <element name="name" type="string"/> <!-- 人员名称 -->
+      <element name="contact" type="string"/> <!-- 人员联系方式 -->
+      <element name="age" type="integer"/> <!-- 人员年龄 -->
+      <element name="departmentId" type="integer"/> <!-- 所在部门 -->
+
+      <element name="gender"> <!-- 人员性别 -->
+        <simpleType>
+          <restriction base="string">
+            <pattern value="male|female|others|unknown"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+
+  <element name="person" type="nju:personInfo"/>
+</schema>
