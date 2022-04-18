@@ -1,19 +1,25 @@
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import javax.xml.parsers.*;
 import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
+import java.util.List;
 
 public class XSLT_Transform {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         String xmlPath="XML文档2.xml";
         String xslPath="transform.xsl";
         String out="XML文档3.xml";
         createXml(xmlPath,xslPath,out);
 
-
-
-
+        // SAX
+        String xml4Path="XML文档4.xml";
+        ScoreSAX.extractFailList(out,xml4Path);
     }
 
 
@@ -48,4 +54,6 @@ public class XSLT_Transform {
 
 
     }
+
+
 }

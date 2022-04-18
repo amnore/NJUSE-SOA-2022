@@ -10,5 +10,11 @@
 
 代码为XSLT_Transform.java      xsl文件为transform.xsl
 
+##### SAX:
+
+主要逻辑在ScoreSAX.java中，ScoreSAX继承自org.xml.sax.helpers.DefaultHandler，覆写startElement, endElement接口实现对XML文档的处理
+
+XML文档3.xml -> List<Score> failList -> XML文档4.xml
+
 
 
