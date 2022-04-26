@@ -34,6 +34,7 @@ public class App extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         var msg = factory.createMessage();
         var body = msg.getSOAPBody();
+        var header = msg.getSOAPHeader();
         var se = msg.getSOAPPart().getEnvelope();
         var reply = ((Supplier<Void>) () -> {
             try {
@@ -63,6 +64,10 @@ public class App extends HttpServlet {
             reply.get();
             return;
         }
+
+        var idHeader = header.addChildElement("id");
+        idHeader.setAttribute("env:mustUnderstand", "true");
+        idHeader.setTextContent(Integer.toString(id));
 
         var grades = Grades.scores.get(id);
         if (grades == null) {
