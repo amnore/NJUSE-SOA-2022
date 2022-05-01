@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema targetNamespace="http://www.nju.edu.cn/schema"
+           xmlns="http://www.w3.org/2001/XMLSchema"
+           xmlns:nju="http://www.nju.edu.cn/schema"
+           xmlns:jw="http://jw.nju.edu.cn/schema"
+           elementFormDefault="qualified">
+  <include schemaLocation="PersonInfo.xsd"/>
+  <include schemaLocation="ScoreList.xsd"/>
+  <import namespace="http://jw.nju.edu.cn/schema" schemaLocation="Student.xsd"/>
+
+  <element name="studentList">
+    <complexType>
+      <sequence>
+        <element name="student" type="jw:studentInfo" maxOccurs="unbounded"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>
