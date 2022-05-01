@@ -2,7 +2,7 @@
 <description xmlns="http://www.w3.org/ns/wsdl" xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jw="http://jw.nju.edu.cn/schema" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xsi:schemaLocation="http://www.w3.org/ns/wsdl http://www.w3.org/2002/ws/desc/ns/wsdl20.xsd http://jw.nju.edu.cn/schema /Student.xsd http://www.w3.org/ns/wsdl/soap https://www.w3.org/2007/06/wsdl/soap.xsd" targetNamespace="http://jw.nju.edu.cn/wsdl">
   <types>
     <xs:schema targetNamespace="http://jw.nju.edu.cn/schema">
-      <xs:element name="studentInfo" >
+      <xs:element name="loginInfo" >
         <xs:complexType>
           <xs:sequence>
             <xs:element name="username" type="jw:学号"></xs:element>
@@ -19,8 +19,8 @@
   <interface name="login">
     <fault name="loginInfoInvalid" element="jw:loginInfoInvalid"></fault>
 
-    <operation name="search" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/iri">
-      <input messageLabel="In" element="jw:studentInfo"></input>
+    <operation name="login" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/iri">
+      <input messageLabel="In" element="jw:loginInfo"></input>
       <output messageLabel="Out" element="jw:loginResponse"></output>
       <outfault ref="jw:loginInfoInvalid" messageLabel="Out"></outfault>
     </operation>
